@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Limon | Anime Portfolio</title>
+  <style>
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #1a0000, #33001a, #330033, #1a001a);
+      color: #f0f0f0;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 1rem;
+      backdrop-filter: blur(8px);
+    }
+    nav a {
+      color: #ff4d4d;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+    nav a:hover {
+      color: #fff;
+      text-shadow: 0 0 5px red;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(to bottom, #0f0000, #1a001f);
+    }
+    .hero h1 {
+      font-size: 3.8rem;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 0 0 10px #cc0000, 0 0 20px #660066;
+    }
+    .hero h1 span {
+      background: linear-gradient(to right, #ff4d4d, #cc00cc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 20px rgba(255, 77, 77, 0.3);
+    }
+    .hero .quote {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #ddd;
+      font-style: italic;
+      opacity: 0;
+      animation: fadeIn 3s ease forwards 1s;
+      text-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+    .scroll-down {
+      background: #ff4d4d;
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 30px;
+    }
+    .scroll-down:hover {
+      background: #cc0000;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+    }
+    .about img {
+      width: 280px;
+      border: 2px solid #ff4d4d;
+    }
+    .about .text {
+      flex: 1;
+    }
+
+    .custom-section {
+      margin-top: 40px;
+      background: rgba(0, 0, 0, 0.2);
+      border-left: 4px solid #ff4d4d;
+      padding: 30px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 77, 77, 0.1);
+    }
+    .custom-section h3 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: #ff8080;
+    }
+    .custom-section ul {
+      list-style-type: '✦ ';
+      padding-left: 20px;
+    }
+    .custom-section ul li {
+      margin-bottom: 10px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+    .skill-card {
+      background: #1a1a1a;
+      border: 1px solid #ff4d4d;
+      border-radius: 12px;
+      padding: 20px;
+      width: 140px;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .skill-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px red;
+    }
+
+    .daily-box {
+      background: #1a1a1a;
+      border-left: 5px solid #ff4d4d;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    .daily-box h4 {
+      margin-bottom: 5px;
+      color: #ff8080;
+    }
+
+    .bottom-quote {
+      text-align: center;
+      font-size: 1.1rem;
+      font-style: italic;
+      margin-bottom: 50px;
+      color: #e0e0e0;
+      animation: fadeIn 2.5s ease forwards;
+      text-shadow: 0 0 5px rgba(255,255,255,0.2);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      background: #2a2a2a;
+      color: #fff;
+    }
+    .contact-form button {
+      background: #ff4d4d;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .contact-form button:hover {
+      background: #cc0000;
+    }
+    .socials {
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+    }
+    .socials a {
+      font-size: 1.5rem;
+      transition: 0.3s;
+    }
+    .socials a:hover {
+      transform: scale(1.2);
+      color: #ff4d4d;
+    }
+
+    @media (max-width: 768px) {
+      .about {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .hero h1 {
+        font-size: 2.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#daily">Daily</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero" id="hero">
+    <h1>it's <span>Limon</span></h1>
+    <p class="quote">"A lesson without pain is meaningless."</p>
+    <button class="scroll-down" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+      Scroll Down ↓
+    </button>
+  </section>
+
+  <section id="about">
+    <div class="about">
+      <img src="profile.png" alt="Limon Profile"/>
+      <div class="text">
+        <h2>About Me</h2>
+        <p>Hey, I’m Limon from Bangladesh 🇧🇩 — a self-taught web developer deeply inspired by anime, especially Thorfinn from *Vinland Saga*. His journey of loss, growth, and finding purpose mirrors how I’m shaping my own path.</p>
+        <p>I dream of becoming a successful freelancer, traveling to Japan 🇯🇵, and creating meaningful work that resonates with people emotionally and visually.</p>
+      </div>
+    </div>
+
+    <div class="custom-section">
+      <h3>🧩 What Makes Me, Me</h3>
+      <ul>
+        <li>I believe discipline beats motivation.</li>
+        <li>I find strength in anime edits, music, and deep quotes — especially from shows like Vinland Saga.</li>
+        <li>I’m not perfect, but I’m intentional. I reflect, learn, and grow.</li>
+        <li>I believe in being honest, grateful, and resilient, even when life feels hard.</li>
+        <li>I’m here to build my own world — through code, creation, and consistency.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 style="text-align:center; margin-bottom:30px;">My Skills</h2>
+    <div class="skills">
+      <div class="skill-card">HTML 🔥</div>
+      <div class="skill-card">CSS 🎨</div>
+      <div class="skill-card">JavaScript ⚡</div>
+      <div class="skill-card">GitHub 🐙</div>
+      <div class="skill-card">Responsive Web 🌐</div>
+    </div>
+
+    <div class="custom-section">
+      <h3>🔗 What I’m Building</h3>
+      <ul>
+        <li>A dark-themed anime-style portfolio</li>
+        <li>A content-sharing website with blog features and contact forms</li>
+        <li>Projects that reflect my personal journey, not just technical skills</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="daily">
+    <h2 style="text-align:center; margin-bottom:30px;">Daily Thoughts</h2>
+    <div class="daily-box">
+      <h4>July 19, 2025</h4>
+      <p>Every day is a chance to rebuild. Stay consistent, stay true to yourself. I’ll get to Japan one day — just like Thorfinn found peace after the storm.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="bottom-quote">
+      <p>"I’m not here to fit in. I’m here to build what doesn’t exist yet."</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 style="text-align:center; margin-bottom:30px;">Contact Me</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required/>
+      <input type="email" placeholder="Your Email" required/>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p style="margin-top:20px;">📧 Gmail: limon.dev.contact@gmail.com</p>
+    <div class="socials">
+      <a href="https://github.com/limon" target="_blank">🐱 GitHub</a>
+      <a href="https://youtube.com/@limon" target="_blank">📺 YouTube</a>
+    </div>
+  </section>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+    sections.forEach(section => observer.observe(section));
+  </script>
+
+</body>
+</html>
