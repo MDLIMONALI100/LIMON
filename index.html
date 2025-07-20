@@ -44,6 +44,12 @@
       border-bottom: 1px solid #ff4d4d;
     }
 
+    @media (max-width: 768px) {
+      nav {
+        position: static;
+      }
+    }
+
     nav a {
       padding: 8px 12px;
       color: #ff4d4d;
@@ -87,21 +93,23 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       text-align: center;
-      padding: 20px;
+      padding: 40px 20px 20px;
     }
 
     .hero h1 {
       font-size: 3rem;
       color: #fff;
       text-shadow: 0 0 10px #cc0000;
+      margin-top: 20px;
     }
 
     .hero span {
       background: linear-gradient(to right, #ff4d4d, #cc00cc);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 15px rgba(255, 77, 77, 0.5);
     }
 
     .subtitle {
