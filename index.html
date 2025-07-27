@@ -19,24 +19,20 @@
       box-sizing: border-box;
       scroll-behavior: smooth;
     }
-
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(to bottom, #1a001a, #330033, #4d0026, #660000);
       color: #f0f0f0;
       line-height: 1.6;
     }
-
     a {
       color: inherit;
       text-decoration: none;
     }
-
     img {
       max-width: 100%;
       border-radius: 12px;
     }
-
     nav {
       position: sticky;
       top: 0;
@@ -50,13 +46,11 @@
       backdrop-filter: blur(10px);
       border-bottom: 1px solid #ff4d4d;
     }
-
     @media (max-width: 768px) {
       nav {
         position: static;
       }
     }
-
     nav a {
       padding: 8px 12px;
       color: #ff4d4d;
@@ -64,14 +58,12 @@
       border-radius: 8px;
       transition: 0.3s;
     }
-
     nav a.active,
     nav a:hover {
       background: rgba(255, 77, 77, 0.2);
       color: white;
       box-shadow: 0 0 10px #ff4d4d;
     }
-
     section {
       padding: 60px 20px;
       max-width: 1100px;
@@ -80,12 +72,10 @@
       transform: translateY(20px);
       transition: opacity 0.4s ease-out, transform 0.4s ease-out;
     }
-
     section.visible {
       opacity: 1;
       transform: translateY(0);
     }
-
     .section-title {
       text-align: center;
       font-size: 2rem;
@@ -94,7 +84,6 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-
     .hero {
       min-height: 100vh;
       display: flex;
@@ -104,27 +93,23 @@
       text-align: center;
       padding: 40px 20px;
     }
-
     .hero h1 {
       font-size: 3rem;
       color: #fff;
       text-shadow: 0 0 10px #cc0000;
       margin-bottom: 10px;
     }
-
     .hero span {
       background: linear-gradient(to right, #ff4d4d, #cc00cc);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       text-shadow: 0 0 15px rgba(255, 77, 77, 0.5);
     }
-
     .subtitle {
       font-size: 1.2rem;
       color: #ff9999;
       margin-bottom: 20px;
     }
-
     .tagline-carousel {
       margin-bottom: 25px;
       font-size: 1.2rem;
@@ -133,29 +118,24 @@
       height: 30px;
       overflow: hidden;
     }
-
     .tagline {
       opacity: 0;
       transform: translateY(20px);
       animation: slideIn 3s infinite;
     }
-
     .tagline:nth-child(2) { animation-delay: 1s; }
     .tagline:nth-child(3) { animation-delay: 2s; }
-
     @keyframes slideIn {
       0%, 20% { opacity: 0; transform: translateY(20px); }
       30%, 60% { opacity: 1; transform: translateY(0); }
       70%, 100% { opacity: 0; transform: translateY(-20px); }
     }
-
     .cta-buttons {
       display: flex;
       flex-wrap: wrap;
       gap: 15px;
       justify-content: center;
     }
-
     .scroll-down {
       padding: 10px 20px;
       background: #ff4d4d;
@@ -166,11 +146,9 @@
       cursor: pointer;
       transition: 0.3s;
     }
-
     .scroll-down:hover {
       background: #cc0000;
     }
-
     .about {
       display: flex;
       flex-direction: column;
@@ -178,26 +156,22 @@
       align-items: center;
       text-align: center;
     }
-
     .about img {
       width: 250px;
       border: 2px solid #ff4d4d;
     }
-
     .custom-section {
       background: rgba(0, 0, 0, 0.3);
       padding: 20px;
       border-radius: 10px;
       margin-top: 30px;
     }
-
     .skills {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
     }
-
     .skill-card {
       background: #1a1a1a;
       border: 1px solid #ff4d4d;
@@ -207,12 +181,10 @@
       text-align: center;
       transition: 0.3s;
     }
-
     .skill-card:hover {
       transform: scale(1.05);
       box-shadow: 0 0 10px #ff4d4d;
     }
-
     .progress-bar {
       margin-top: 10px;
       background: #2a2a2a;
@@ -220,19 +192,16 @@
       border-radius: 4px;
       overflow: hidden;
     }
-
     .progress {
       height: 100%;
       background: #ff4d4d;
       transition: width 1s ease-in-out;
     }
-
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
-
     .portfolio-card {
       background: #1a1a1a;
       border: 1px solid #ff4d4d;
@@ -240,29 +209,24 @@
       overflow: hidden;
       transition: 0.3s;
     }
-
     .portfolio-card:hover {
       transform: scale(1.05);
       box-shadow: 0 0 10px #ff4d4d;
     }
-
     .portfolio-card img {
       width: 100%;
       height: 150px;
       object-fit: cover;
     }
-
     .portfolio-card div {
       padding: 15px;
     }
-
     .filter-buttons {
       display: flex;
       justify-content: center;
       gap: 10px;
       margin-bottom: 20px;
     }
-
     .filter-btn {
       padding: 8px 12px;
       background: #2a2a2a;
@@ -272,19 +236,16 @@
       cursor: pointer;
       transition: 0.3s;
     }
-
     .filter-btn.active,
     .filter-btn:hover {
       background: #ff4d4d;
       color: white;
     }
-
     .testimonials {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
-
     .testimonial-card {
       background: #1a1a1a;
       border: 1px solid #ff4d4d;
@@ -292,14 +253,12 @@
       border-radius: 10px;
       text-align: center;
     }
-
     .bottom-quote {
       margin: 40px auto;
       text-align: center;
       font-style: italic;
       color: #e0e0e0;
     }
-
     .contact-form {
       display: flex;
       flex-direction: column;
@@ -307,7 +266,6 @@
       max-width: 500px;
       margin: auto;
     }
-
     .contact-form input,
     .contact-form textarea {
       padding: 10px;
@@ -316,7 +274,6 @@
       background: #2a2a2a;
       color: #fff;
     }
-
     .contact-form button {
       background: #ff4d4d;
       color: white;
@@ -326,32 +283,27 @@
       font-weight: bold;
       cursor: pointer;
     }
-
     .success-message {
       text-align: center;
       color: #28a745;
       font-weight: bold;
       display: none;
     }
-
     .socials {
       display: flex;
       justify-content: center;
       gap: 15px;
       margin-top: 20px;
     }
-
     .socials a {
       color: #ff4d4d;
       font-size: 1.8rem;
       transition: 0.3s;
     }
-
     .socials a:hover {
       color: #ff9999;
       transform: scale(1.1);
     }
-
     .back-to-top {
       position: fixed;
       bottom: 20px;
@@ -364,11 +316,9 @@
       display: none;
       transition: 0.3s;
     }
-
     .back-to-top:hover {
       background: #cc0000;
     }
-
     .theme-toggle {
       position: fixed;
       top: 20px;
@@ -380,56 +330,46 @@
       cursor: pointer;
       font-size: 0.9rem;
     }
-
     body.light-theme {
       background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
       color: #333;
     }
-
     body.light-theme .section-title {
       background: linear-gradient(to right, #ff4d4d, #ff0066, #cc00cc);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-
     body.light-theme nav {
       background: rgba(255, 255, 255, 0.8);
       border-bottom: 1px solid #ff4d4d;
     }
-
     body.light-theme .skill-card,
     body.light-theme .portfolio-card,
     body.light-theme .testimonial-card {
       background: #fff;
       border: 1px solid #ff4d4d;
     }
-
     body.light-theme .contact-form input,
     body.light-theme .contact-form textarea {
       background: #f0f0f0;
       color: #333;
     }
-
     @media (min-width: 768px) {
       .about {
         flex-direction: row;
         text-align: left;
       }
-
       .about .text {
         max-width: 600px;
       }
     }
-
     @media (max-width: 768px) {
       .hero h1 {
         font-size: 2.5rem;
       }
-
       .section-title {
         font-size: 1.8rem;
       }
-
       .about img {
         width: 200px;
       }
@@ -466,7 +406,7 @@
     <div class="about">
       <img src="profile.png" alt="Limon Ali, Web Developer from Bangladesh">
       <div class="text">
-        <p>Hey, I’m Limon from Bangladesh 🇧🇩 — a self-taught web developer inspired by anime, especially Thorfinn from <em>Vinland Saga</em>. His journey of loss, growth, and finding purpose mirrors my path in coding.</p>
+        <p>Hey, I’m Limon from Bangladesh 🇧🇩 — a self-taught web developer inspired by anime, especially Thorfinn from <em>Vinland Saga</em>. His journey of loss, growth, and purpose mirrors my path in coding.</p>
         <p>I dream of becoming a successful freelancer, traveling to Japan 🇯🇵, and building websites that resonate emotionally and visually.</p>
       </div>
     </div>
@@ -520,7 +460,7 @@
         <img src="business-directory.jpg" alt="Local Business Directory by Limon Ali">
         <div>
           <h3>Local Business Directory</h3>
-          <p>A responsive web app with search and map integration, built with HTML, CSS, and JavaScript.</p>
+          <p>A responsive web app with search and map, built with HTML, CSS, and JavaScript.</p>
           <a href="https://mdlimonali100.github.io/BusinessDirectory" class="scroll-down">View Demo</a>
         </div>
       </div>
@@ -529,7 +469,7 @@
         <div>
           <h3>Portfolio Mockup</h3>
           <p>A sleek portfolio for a creative professional, built with HTML, CSS, and JavaScript.</p>
-          <a href="#" class="scroll-down">View Demo</a>
+          <a href="https://mdlimonali100.github.io/PortfolioMockup" class="scroll-down">View Demo</a>
         </div>
       </div>
     </div>
@@ -585,7 +525,6 @@
     const backToTop = document.getElementById('backToTop');
     const themeToggle = document.getElementById('themeToggle');
 
-    // Intersection Observer for section visibility
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -602,7 +541,6 @@
 
     sections.forEach(section => observer.observe(section));
 
-    // Form submission
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const formData = new FormData(form);
@@ -626,7 +564,6 @@
       }
     });
 
-    // Project filter
     const filterButtons = document.querySelectorAll('.filter-btn');
     const portfolioCards = document.querySelectorAll('.portfolio-card');
 
@@ -641,7 +578,6 @@
       });
     });
 
-    // Back to top button
     window.addEventListener('scroll', () => {
       backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
     });
@@ -650,7 +586,6 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Theme toggle
     themeToggle.addEventListener('click', () => {
       document.body.classList.toggle('light-theme');
       themeToggle.textContent = document.body.classList.contains('light-theme') ? 'Dark Theme' : 'Light Theme';
