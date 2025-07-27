@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Limon Ali | Anime-Inspired Web Developer</title>
-  <meta name="description" content="Hire Limon Ali, a freelance web developer from Bangladesh creating responsive, SEO-optimized websites with an anime-inspired flair.">
-  <meta name="keywords" content="web developer, freelance web development, responsive design, Limon Ali, Bangladesh, anime portfolio">
-  <meta name="author" content="Limon Ali">
-  <meta property="og:title" content="Limon Ali - Anime-Inspired Web Developer">
-  <meta property="og:description" content="Explore Limon Ali's portfolio of responsive, modern websites built for businesses and creatives.">
-  <meta property="og:image" content="https://mdlimonali100.github.io/LIMON/profile.png">
-  <meta property="og:url" content="https://mdlimonali100.github.io/LIMON/">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Limon | Anime-Inspired Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     * {
-      margin: 0;
+      margin: 0;   a
       padding: 0;
       box-sizing: border-box;
       scroll-behavior: smooth;
     }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(to bottom, #1a001a, #330033, #4d0026, #660000);
       color: #f0f0f0;
       line-height: 1.6;
     }
+
     a {
       color: inherit;
       text-decoration: none;
     }
+
     img {
       max-width: 100%;
       border-radius: 12px;
     }
+
     nav {
       position: sticky;
       top: 0;
@@ -46,11 +43,13 @@
       backdrop-filter: blur(10px);
       border-bottom: 1px solid #ff4d4d;
     }
+
     @media (max-width: 768px) {
       nav {
         position: static;
       }
     }
+
     nav a {
       padding: 8px 12px;
       color: #ff4d4d;
@@ -58,12 +57,14 @@
       border-radius: 8px;
       transition: 0.3s;
     }
+
     nav a.active,
     nav a:hover {
       background: rgba(255, 77, 77, 0.2);
       color: white;
       box-shadow: 0 0 10px #ff4d4d;
     }
+
     section {
       padding: 60px 20px;
       max-width: 1100px;
@@ -72,10 +73,12 @@
       transform: translateY(20px);
       transition: opacity 0.4s ease-out, transform 0.4s ease-out;
     }
+
     section.visible {
       opacity: 1;
       transform: translateY(0);
     }
+
     .section-title {
       text-align: center;
       font-size: 2rem;
@@ -84,58 +87,62 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+
     .hero {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       text-align: center;
-      padding: 40px 20px;
+      padding: 40px 20px 20px;
     }
+
     .hero h1 {
       font-size: 3rem;
       color: #fff;
       text-shadow: 0 0 10px #cc0000;
-      margin-bottom: 10px;
+      margin-top: 20px;
     }
+
     .hero span {
       background: linear-gradient(to right, #ff4d4d, #cc00cc);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       text-shadow: 0 0 15px rgba(255, 77, 77, 0.5);
     }
+
     .subtitle {
       font-size: 1.2rem;
       color: #ff9999;
-      margin-bottom: 20px;
+      margin-top: 10px;
     }
-    .tagline-carousel {
-      margin-bottom: 25px;
-      font-size: 1.2rem;
-      font-weight: 600;
+
+    .quote-box {
+      margin-top: 25px;
+      padding: 20px;
+      background: rgba(255, 77, 77, 0.1);
+      border-left: 4px solid #ff4d4d;
+      border-radius: 10px;
       color: #ff4d4d;
-      height: 30px;
-      overflow: hidden;
+      font-weight: 600;
+      text-align: center;
+      animation: fadeInOut 8s ease-in-out infinite;
     }
-    .tagline {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: slideIn 3s infinite;
+
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 0; }
+      20%, 80% { opacity: 1; }
     }
-    .tagline:nth-child(2) { animation-delay: 1s; }
-    .tagline:nth-child(3) { animation-delay: 2s; }
-    @keyframes slideIn {
-      0%, 20% { opacity: 0; transform: translateY(20px); }
-      30%, 60% { opacity: 1; transform: translateY(0); }
-      70%, 100% { opacity: 0; transform: translateY(-20px); }
-    }
+
     .cta-buttons {
+      margin-top: 30px;
       display: flex;
       flex-wrap: wrap;
       gap: 15px;
       justify-content: center;
     }
+
     .scroll-down {
       padding: 10px 20px;
       background: #ff4d4d;
@@ -146,9 +153,11 @@
       cursor: pointer;
       transition: 0.3s;
     }
+
     .scroll-down:hover {
       background: #cc0000;
     }
+
     .about {
       display: flex;
       flex-direction: column;
@@ -156,22 +165,26 @@
       align-items: center;
       text-align: center;
     }
+
     .about img {
       width: 250px;
       border: 2px solid #ff4d4d;
     }
+
     .custom-section {
       background: rgba(0, 0, 0, 0.3);
       padding: 20px;
       border-radius: 10px;
       margin-top: 30px;
     }
+
     .skills {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
     }
+
     .skill-card {
       background: #1a1a1a;
       border: 1px solid #ff4d4d;
@@ -181,84 +194,26 @@
       text-align: center;
       transition: 0.3s;
     }
+
     .skill-card:hover {
       transform: scale(1.05);
       box-shadow: 0 0 10px #ff4d4d;
     }
-    .progress-bar {
-      margin-top: 10px;
-      background: #2a2a2a;
-      height: 8px;
-      border-radius: 4px;
-      overflow: hidden;
-    }
-    .progress {
-      height: 100%;
-      background: #ff4d4d;
-      transition: width 1s ease-in-out;
-    }
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .portfolio-card {
+
+    .daily-box {
       background: #1a1a1a;
-      border: 1px solid #ff4d4d;
-      border-radius: 10px;
-      overflow: hidden;
-      transition: 0.3s;
+      border-left: 5px solid #ff4d4d;
+      padding: 20px;
+      border-radius: 8px;
     }
-    .portfolio-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 10px #ff4d4d;
-    }
-    .portfolio-card img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-    }
-    .portfolio-card div {
-      padding: 15px;
-    }
-    .filter-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-    .filter-btn {
-      padding: 8px 12px;
-      background: #2a2a2a;
-      color: #ff4d4d;
-      border: 1px solid #ff4d4d;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .filter-btn.active,
-    .filter-btn:hover {
-      background: #ff4d4d;
-      color: white;
-    }
-    .testimonials {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .testimonial-card {
-      background: #1a1a1a;
-      border: 1px solid #ff4d4d;
-      padding: 15px;
-      border-radius: 10px;
-      text-align: center;
-    }
+
     .bottom-quote {
       margin: 40px auto;
       text-align: center;
       font-style: italic;
       color: #e0e0e0;
     }
+
     .contact-form {
       display: flex;
       flex-direction: column;
@@ -266,6 +221,7 @@
       max-width: 500px;
       margin: auto;
     }
+
     .contact-form input,
     .contact-form textarea {
       padding: 10px;
@@ -274,6 +230,7 @@
       background: #2a2a2a;
       color: #fff;
     }
+
     .contact-form button {
       background: #ff4d4d;
       color: white;
@@ -283,120 +240,60 @@
       font-weight: bold;
       cursor: pointer;
     }
+
     .success-message {
       text-align: center;
       color: #28a745;
       font-weight: bold;
       display: none;
     }
+
     .socials {
       display: flex;
       justify-content: center;
       gap: 15px;
       margin-top: 20px;
     }
+
     .socials a {
       color: #ff4d4d;
       font-size: 1.8rem;
       transition: 0.3s;
     }
+
     .socials a:hover {
       color: #ff9999;
       transform: scale(1.1);
     }
-    .back-to-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #ff4d4d;
-      color: white;
-      padding: 10px;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      transition: 0.3s;
-    }
-    .back-to-top:hover {
-      background: #cc0000;
-    }
-    .theme-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #ff4d4d;
-      color: white;
-      padding: 8px 12px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 0.9rem;
-    }
-    body.light-theme {
-      background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
-      color: #333;
-    }
-    body.light-theme .section-title {
-      background: linear-gradient(to right, #ff4d4d, #ff0066, #cc00cc);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    body.light-theme nav {
-      background: rgba(255, 255, 255, 0.8);
-      border-bottom: 1px solid #ff4d4d;
-    }
-    body.light-theme .skill-card,
-    body.light-theme .portfolio-card,
-    body.light-theme .testimonial-card {
-      background: #fff;
-      border: 1px solid #ff4d4d;
-    }
-    body.light-theme .contact-form input,
-    body.light-theme .contact-form textarea {
-      background: #f0f0f0;
-      color: #333;
-    }
+
     @media (min-width: 768px) {
       .about {
         flex-direction: row;
         text-align: left;
       }
+
       .about .text {
         max-width: 600px;
-      }
-    }
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-      .section-title {
-        font-size: 1.8rem;
-      }
-      .about img {
-        width: 200px;
       }
     }
   </style>
 </head>
 <body>
-  <button class="theme-toggle" id="themeToggle">Light Theme</button>
+
   <nav>
     <a href="#hero">Home</a>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#testimonials">Testimonials</a>
+    <a href="#daily">Thoughts</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section class="hero" id="hero">
     <h1>it's <span>Limon</span></h1>
     <h2 class="subtitle">Web Developer & Anime Enthusiast</h2>
-    <div class="tagline-carousel">
-      <div class="tagline">Crafting Responsive Websites</div>
-      <div class="tagline">Inspired by Anime</div>
-      <div class="tagline">Building Your Vision</div>
-    </div>
+    <div class="quote-box">“The magic you’re looking for is in the work you’re avoiding.”</div>
     <div class="cta-buttons">
-      <button class="scroll-down" onclick="document.getElementById('portfolio').scrollIntoView({behavior:'smooth'})">View Projects ↓</button>
+      <button class="scroll-down" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">Explore More ↓</button>
       <button class="scroll-down" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Me 📩</button>
     </div>
   </section>
@@ -404,20 +301,20 @@
   <section id="about">
     <h2 class="section-title">About Me</h2>
     <div class="about">
-      <img src="profile.png" alt="Limon Ali, Web Developer from Bangladesh">
+      <img src="profile.png" alt="Limon Profile" />
       <div class="text">
-        <p>Hey, I’m Limon from Bangladesh 🇧🇩 — a self-taught web developer inspired by anime, especially Thorfinn from <em>Vinland Saga</em>. His journey of loss, growth, and purpose mirrors my path in coding.</p>
-        <p>I dream of becoming a successful freelancer, traveling to Japan 🇯🇵, and building websites that resonate emotionally and visually.</p>
+        <p>Hey, I’m Limon from Bangladesh 🇧🇩 — a self-taught web developer deeply inspired by anime, especially Thorfinn from <em>Vinland Saga</em>. His journey of loss, growth, and finding purpose mirrors how I’m shaping my own path.</p>
+        <p>I dream of becoming a successful freelancer, traveling to Japan 🇯🇵, and creating meaningful work that resonates with people emotionally and visually.</p>
       </div>
     </div>
     <div class="custom-section">
       <h3>🧩 What Makes Me, Me</h3>
       <ul>
-        <li>Discipline over motivation drives my work.</li>
-        <li>Anime edits, music, and deep quotes fuel my creativity.</li>
-        <li>I’m intentional, reflecting and growing daily.</li>
-        <li>Honesty, gratitude, and resilience define me.</li>
-        <li>I’m building my world through code and consistency.</li>
+        <li>I believe discipline beats motivation.</li>
+        <li>I find strength in anime edits, music, and deep quotes — especially from shows like Vinland Saga.</li>
+        <li>I’m not perfect, but I’m intentional. I reflect, learn, and grow.</li>
+        <li>I believe in being honest, grateful, and resilient, even when life feels hard.</li>
+        <li>I’m here to build my own world — through code, creation, and consistency.</li>
       </ul>
     </div>
   </section>
@@ -425,87 +322,27 @@
   <section id="skills">
     <h2 class="section-title">My Skills</h2>
     <div class="skills">
-      <div class="skill-card">
-        HTML 🔥
-        <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
-      </div>
-      <div class="skill-card">
-        CSS 🎨
-        <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
-      </div>
-      <div class="skill-card">
-        JavaScript ⚡
-        <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
-      </div>
-      <div class="skill-card">
-        GitHub 🐙
-        <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
-      </div>
-      <div class="skill-card">
-        Responsive Web 🌐
-        <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
-      </div>
+      <div class="skill-card">HTML 🔥</div>
+      <div class="skill-card">CSS 🎨</div>
+      <div class="skill-card">JavaScript ⚡</div>
+      <div class="skill-card">GitHub 🐙</div>
+      <div class="skill-card">Responsive Web 🌐</div>
+    </div>
+    <div class="custom-section">
+      <h3>🔗 What I’m Building</h3>
+      <ul>
+        <li>A dark-themed anime-style portfolio</li>
+        <li>A content-sharing website with blog features and contact forms</li>
+        <li>Projects that reflect my personal journey, not just technical skills</li>
+      </ul>
     </div>
   </section>
 
-  <section id="portfolio">
-    <h2 class="section-title">Portfolio</h2>
-    <div class="filter-buttons">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="web-app">Web Apps</button>
-      <button class="filter-btn" data-filter="portfolio">Portfolios</button>
-    </div>
-    <div class="portfolio-grid">
-      <div class="portfolio-card" data-category="web-app">
-        <img src="business-directory.jpg" alt="Local Business Directory by Limon Ali">
-        <div>
-          <h3>Local Business Directory</h3>
-          <p>A responsive web app with search and map, built with HTML, CSS, and JavaScript.</p>
-          <a href="https://mdlimonali100.github.io/BusinessDirectory" class="scroll-down">View Demo</a>
-        </div>
-      </div>
-      <div class="portfolio-card" data-category="portfolio">
-        <img src="portfolio-mockup.jpg" alt="Portfolio Website Mockup by Limon Ali">
-        <div>
-          <h3>Portfolio Mockup</h3>
-          <p>A sleek portfolio for a creative professional, built with HTML, CSS, and JavaScript.</p>
-          <a href="https://mdlimonali100.github.io/PortfolioMockup" class="scroll-down">View Demo</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="testimonials">
-    <h2 class="section-title">Testimonials</h2>
-    <div class="testimonials">
-      <div class="testimonial-card">
-        <p class="italic">"Limon built a stunning, responsive website for my business!"</p>
-        <p class="font-semibold mt-2">– Mock Client, Small Business Owner</p>
-      </div>
-      <div class="testimonial-card">
-        <p class="italic">"Fast delivery and great communication. Highly recommend!"</p>
-        <p class="font-semibold mt-2">– Mock Client, Startup Founder</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2 class="section-title">Contact Me</h2>
-    <form id="contactForm" class="contact-form" action="https://formspree.io/f/mvgqzokd" method="POST">
-      <input type="hidden" name="_next" value="https://mdlimonali100.github.io/LIMON/thank-you.html">
-      <input type="hidden" name="_captcha" value="true">
-      <div class="success-message" id="successMessage">Thank you! Your message has been sent.</div>
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p style="margin-top:20px; text-align:center;">📧 Gmail: limon.dev.contact@gmail.com</p>
-    <div class="socials">
-      <a href="https://github.com/mdlimonali100" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://youtube.com/@mdlimonali100" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://facebook.com/mdlimonali100" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://x.com/mdlimonali100" target="_blank"><i class="fab fa-twitter"></i></a>
+  <section id="daily">
+    <h2 class="section-title">Daily Thoughts</h2>
+    <div class="daily-box">
+      <h4>July 19, 2025</h4>
+      <p>Every day is a chance to rebuild. Stay consistent, stay true to yourself. I’ll get to Japan one day — just like Thorfinn found peace after the storm.</p>
     </div>
   </section>
 
@@ -515,15 +352,28 @@
     </div>
   </section>
 
-  <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
+  <section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <form id="contactForm" class="contact-form" action="https://formspree.io/f/mvgqzokd" method="POST">
+      <div class="success-message" id="successMessage">Thank you! Your message has been sent.</div>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p style="margin-top:20px; text-align:center;">📧 Gmail: limon.dev.contact@gmail.com</p>
+    <div class="socials">
+      <a href="https://github.com/limon" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://youtube.com/@limon" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://wikipedia.org/" target="_blank"><i class="fab fa-wikipedia-w"></i></a>
+    </div>
+  </section>
 
   <script>
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll("nav a");
-    const form = document.getElementById('contactForm');
-    const successMessage = document.getElementById('successMessage');
-    const backToTop = document.getElementById('backToTop');
-    const themeToggle = document.getElementById('themeToggle');
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -541,8 +391,12 @@
 
     sections.forEach(section => observer.observe(section));
 
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+
       const formData = new FormData(form);
       try {
         const response = await fetch(form.action, {
@@ -550,6 +404,7 @@
           headers: { 'Accept': 'application/json' },
           body: formData
         });
+
         if (response.ok) {
           successMessage.style.display = 'block';
           form.reset();
@@ -562,33 +417,6 @@
       } catch (error) {
         alert("Oops! There was a problem submitting your form.");
       }
-    });
-
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const portfolioCards = document.querySelectorAll('.portfolio-card');
-
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-        const filter = button.getAttribute('data-filter');
-        portfolioCards.forEach(card => {
-          card.style.display = filter === 'all' || card.getAttribute('data-category') === filter ? 'block' : 'none';
-        });
-      });
-    });
-
-    window.addEventListener('scroll', () => {
-      backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
-    });
-
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    themeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('light-theme');
-      themeToggle.textContent = document.body.classList.contains('light-theme') ? 'Dark Theme' : 'Light Theme';
     });
   </script>
 </body>
